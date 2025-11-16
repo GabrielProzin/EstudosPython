@@ -1,0 +1,53 @@
+Semana 1 – Fundamentos da Linguagem
+----------------------------------------------------------------------------------------------------------------------------------------------------
+| Dia | Tema                       | Tópicos principais                                    | Tarefa prática                                        |
+| --- | -------------------------- | ----------------------------------------------------- | ----------------------------------------------------- |
+| 1   | Introdução ao Python       | instalação (ou usar Google Colab), sintaxe, `print()` | Exiba seu nome, idade e profissão com `print()`       |
+| 2   | Variáveis e tipos de dados | `int`, `float`, `str`, `bool`, `type()`               | Crie variáveis de diferentes tipos e exiba no console |
+| 3   | Operadores                 | aritméticos, relacionais e lógicos                    | Crie um programa que compara dois números             |
+| 4   | Entrada de dados           | `input()`, conversão de tipos                         | Crie um programa que soma dois números digitados      |
+| 5   | Condicionais               | `if`, `elif`, `else`                                  | Programa que verifica se a pessoa é maior de idade    |
+| 6   | Loops                      | `for`, `while`, `break`, `continue`                   | Tabuada ou contador automático                        |
+| 7   | Revisão e mini-projeto     | conceitos anteriores                                  | Programa que pede nome, idade e diz se pode dirigir   |
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
+Semana 2 – Estruturas e Funções
+-------------------------------------------------------------------------------------------------------------------
+| Dia | Tema                      | Tópicos principais                    | Tarefa prática                        |
+| --- | ------------------------- | ------------------------------------- | ------------------------------------- |
+| 8   | Listas                    | `append()`, `remove()`, `len()`, `in` | Lista de compras com adição e remoção |
+| 9   | Tuplas e dicionários      | chaves, valores, `items()`            | Dicionário com nome, idade e cidade   |
+| 10  | Funções                   | `def`, parâmetros e retorno           | Função que calcula IMC                |
+| 11  | Escopo e retorno múltiplo | variáveis locais/globais              | Função que retorna soma e média       |
+| 12  | Módulos e bibliotecas     | `import`, `math`, `random`            | Gerador de senha aleatória            |
+| 13  | Tratamento de erros       | `try`, `except`, `finally`            | Calculadora com tratamento de erro    |
+| 14  | Revisão e mini-projeto    | uso combinado                         | Mini-sistema de notas escolares       |
+-------------------------------------------------------------------------------------------------------------------
+
+Semana 3 – Trabalhando com dados
+-------------------------------------------------------------------------------------------------------------------------
+| Dia | Tema                             | Tópicos principais                 | Tarefa prática                          |
+| --- | -------------------------------- | ---------------------------------- | --------------------------------------- |
+| 15  | Manipulação de arquivos          | `open()`, `read()`, `write()`      | Criar e ler um arquivo `.txt`           |
+| 16  | CSV e JSON                       | `csv`, `json`                      | Ler um CSV com nomes e notas            |
+| 17  | Biblioteca `Pandas`              | DataFrames, `head()`, `describe()` | Analisar planilha de alunos             |
+| 18  | Biblioteca `NumPy`               | arrays, operações matemáticas      | Média e desvio padrão de notas          |
+| 19  | Visualização com `Matplotlib`    | gráficos simples                   | Gráfico de barras com notas             |
+| 20  | Revisão prática                  | manipular planilha real            | Criar um relatório em gráfico           |
+| 21  | Projeto: **Relatório de vendas** | integrar CSV + Pandas + Matplotlib | Analisar vendas mensais e gerar gráfico |
+-------------------------------------------------------------------------------------------------------------------------
+
+Semana 4 – Projeto e automação
+----------------------------------------------------------------------------------------------------------------------------------------------
+| Dia | Tema                                      | Tópicos principais                            | Tarefa prática                           |
+| --- | ----------------------------------------- | --------------------------------------------- | ---------------------------------------- |
+| 22  | Módulo `datetime` e `os`                  | datas, manipulação de arquivos                | Renomear arquivos com data atual         |
+| 23  | `requests` e APIs                         | consumir dados da internet                    | API de cotação de moedas                 |
+| 24  | Automação de tarefas                      | introdução ao `Selenium`                      | Abrir site e coletar informações simples |
+| 25  | Projeto 1: **Conversor de Moedas**        | juntar requests + lógica                      | Converter dólar/euro para real           |
+| 26  | Projeto 2: **Bot de alerta de preços**    | usar API e condições                          | Enviar alerta se preço cair              |
+| 27  | Projeto 3: **Análise de gastos pessoais** | CSV + Pandas + gráfico                        | Criar gráfico de despesas por categoria  |
+| 28  | Projeto final – livre                     | você escolhe: automação, análise ou IA básica | Desenvolver e apresentar                 |
+| 29  | Revisão geral                             | revisar sintaxe e erros comuns                | Refatorar o projeto                      |
+| 30  | Encerramento                              | documentar e publicar no GitHub               | Publicar o projeto final no GitHub       |
+----------------------------------------------------------------------------------------------------------------------------------------------

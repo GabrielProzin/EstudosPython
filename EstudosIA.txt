@@ -1,0 +1,11 @@
+| Etapa                                     | Objetivo                                                                               | Recursos sugeridos                                                                  |
+| ----------------------------------------- | -------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
+| **1. Fundamentos de Python e Matemática** | Aprender a programar e revisar conceitos matemáticos aplicados.                        | Curso “Python para Data Science” (Alura, Udemy, ou DIO) + Khan Academy (matemática) |
+| **2. Introdução à IA e Machine Learning** | Entender o que é IA, aprendizado supervisionado e não supervisionado, e redes neurais. | “Machine Learning” de Andrew Ng (Coursera — gratuito)                               |
+| **3. Praticar com projetos pequenos**     | Treinar modelos em bases reais (ex: prever notas, preços, imagens).                    | Kaggle, Google Colab, datasets públicos                                             |
+| **4. Aprender bibliotecas de IA**         | Saber usar frameworks que são padrão do mercado.                                       | `Scikit-learn`, `TensorFlow` e `PyTorch`                                            |
+| **5. Estudar temas avançados**            | Deep Learning, NLP, Visão Computacional, IA Generativa.                                | Fast.ai, DeepLearning.ai, YouTube (3Blue1Brown, StatQuest)                          |
+
+
+
+https://www.w3schools.com/python/

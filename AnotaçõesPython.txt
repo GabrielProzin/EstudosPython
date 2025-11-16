@@ -1,0 +1,149 @@
+=================================
+#Examples how to create Variables
+myvar =
+my_var =
+_my_var =
+myVar =
+MYVAR =
+myvar2 =
+=================================
+|
+|
+|
+======================================
+#Many values to multiple Variables
+x, y, z = "Orange", "Banana", "Cherry"
+======================================
+|
+|
+|
+================================
+#One value to multiple Variables
+x = y = z = "Orange"
+================================
+|
+|
+|
+======================================
+#Unpack a Collection
+
+fruits = ["apple", "banana", "cherry"]
+x, y, z = fruits
+======================================
+|
+|
+|
+===============================================================
+#PYTHON DATA TYPES#                              #Data Type    
+Text Type:	    	    	    	                str
+Numeric Types:		    	    	                int, float, complex
+Sequence Types:		    	    	                list, tuple, range
+Mapping Type:		    	    	                dict
+Set Types:	    	    	    	                set, frozenset
+Boolean Type:		    	    	                bool
+Binary Types:		    	    	                bytes, bytearray, memoryview
+None Type:	    	    	    	                NoneType
+
+
+#Setting the Data                                #Data Type
+x = "Hello World"===================================str
+x = 20	                                            int
+x = 20.5============================================float
+x = 1j		                                        complex
+x = ["apple", "banana", "cherry"]===================list
+x = ("apple", "banana", "cherry")		            tuple
+x = range(6)========================================range
+x = {"name" : "John", "age" : 36}		            dict
+x = {"apple", "banana", "cherry"}===================set
+x = frozenset({"apple", "banana", "cherry"})	    frozenset
+x = True============================================bool
+x = b"Hello"		                                bytes
+x = bytearray(5)====================================bytearray
+x = memoryview(bytes(5))		                    memoryview
+x = None============================================NoneType
+
+
+#Setting the Specific Data Type 	             #Data Type
+x = str("Hello World")==============================str
+x = int(20)	                                        int
+x = float(20.5)=====================================float
+x = complex(1j)	                                    complex
+x = list(("apple", "banana", "cherry"))=============list
+x = tuple(("apple", "banana", "cherry"))	        tuple
+x = range(6)========================================range
+x = dict(name="John", age=36)	                    dict
+x = set(("apple", "banana", "cherry"))==============set
+x = frozenset(("apple", "banana", "cherry"))	    frozenset
+x = bool(5)=========================================bool
+x = bytes(5)	                                    bytes
+x = bytearray(5)====================================bytearray
+x = memoryview(bytes(5))	                        memoryview
+
+
+#Explanation of concepts
+
+-COMPLEX: It represents numbers with a real part and an imaginary part, used in mathematics and engineering.
+
+z = 3 + 4j           # 3 it's the real part, 4j is the imaginary
+print(z.real)        # 3.0
+print(z.imag)        # 4.0
+print(z * (2 - 3j))  # Operation between complexes
+
+Output: 3.0
+        4.0
+        18 + -1j ;
+        
+|/\/\/\/\/\---/\/\/\/\/\|
+
+-LIST: A mutable colection(can change) and ordered of elemets.
+
+frutas = ["maçã", "banana", "laranja"]
+print(frutas[1])     # Acessa o segundo item
+frutas.append("uva") # Adiciona novo item
+frutas.remove("banana")
+print(frutas)
+
+Output: banana
+        ['maçã', 'laranja', 'uva']
+
+|/\/\/\/\/\---/\/\/\/\/\|
+
+
+-TUPLE: Similiar to a list, but immutable(cannot be changed after creation).
+
+cores = ("vermelho", "azul", "verde")
+print(cores[0])
+cores[1] = "roxo"  # ❌ Error! cant't changed.
+
+Output: vermelho
+
+|/\/\/\/\/\---/\/\/\/\/\|
+
+
+-RANGE: Sequence of numbers
+    
+for i in range(5):
+    print(i)
+
+Output: 0
+        1
+        2
+        3
+        4
+
+|/\/\/\/\/\---/\/\/\/\/\|
+
+
+-DICT: Colection "chave:valor". Very commonly used to represent structure of data.
+
+pessoa = {"nome": "Ana", "idade": 25}
+print(pessoa["nome"])       # Acessa valor pela chave
+pessoa["idade"] = 26        # Atualiza valor
+pessoa["cidade"] = "SP"     # Adiciona nova chave
+print(pessoa)
+
+Output:
+        Ana
+        {'nome': 'Ana', 'idade': 26, 'cidade': 'SP'}
+
+===============================================================
