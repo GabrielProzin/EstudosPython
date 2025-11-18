@@ -31,10 +31,10 @@ nota3 = float(input("Digite a terceira nota: "))
 media = (nota1 + nota2 + nota3) / 3
 
 if media >= 7:
-    aprovacao = str('Aprovado!')
-if 5 <= media < 7:
-    aprovacao = str('Recuperação!')
-if media < 5:
-    aprovacao = str('Reprovado!')
+    situacao = "Aprovado"
+elif media >= 5:
+    situacao = "Recuperação"
+else:
+    situacao = "Reprovado"
 
 print(f"FICHA DO ALUNO \n Nome: {nome} \n Idade: {idade} \n Média: {media} \n Situação: {aprovacao}")

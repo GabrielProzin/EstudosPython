@@ -11,3 +11,24 @@ if senha == 'Python123':
     print("Acesso permitido")
 else:
     print("Acesso negado")
+
+
+
+'''
+CORREÇÕES // MELHORIAS
+
+🔧 Pequena melhoria:
+
+str() no input não é necessário
+Tornar a comparação case-sensitive ou case-insensitive (opcional)
+
+
+senha = input("Digite a senha: ")
+
+if senha == "Python123":
+    print("Acesso permitido")
+else:
+    print("Acesso negado")
+
+
+'''

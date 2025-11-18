@@ -21,10 +21,32 @@ idade = 2025 - ano_nascimento
 
 print(f"Seu nome é {nome}, seu ano de nascimento é {ano_nascimento}, logo a sua idade é {idade}, saldo bancário: R${saldo_bancario} reais, possui cartão: {possui_cartao}")
 
-#output:
-#PS C:\Users\Gabriel Mendes\Desktop\EstudosPython> & "C:/Users/Gabriel Mendes/AppData/Local/Programs/Python/Python313/python.exe" "c:/Users/Gabriel Mendes/Desktop/EstudosPythonPS C:\Users\Gabriel Mendes\Desktop\EstudosPython> & "C:/Users/Gabriel Mendes/AppData/Local/Programs/Python/Python313/python.exe" "c:/Users/Gabriel Mendes/Desktop/EstudosPython/Estudos/Semana 1/Dia-2.3.py"
-#Digite seu nome: gabriel
-#Digite o ano de nascimento: 2004
-#Digite o nome da cidade: goiania
-#Digite o seu saldo bancário: 12301593
-#Seu nome é gabriel, seu ano de nascimento é 2004, logo a sua idade é 21, saldo bancário: R$12301593.0 reais, possui cartão: True
+'''
+CORREÇÕES // MELHORIAS
+
+🔧 Melhorias
+
+-Separar as linhas do print fica mais organizado
+-possui_cartao = True poderia ser variável recebida pelo usuário
+-Valores monetários poderiam ter formatação melhor
+-idade poderia ser calculada com ano atual automático usando módulo datetime (mas isso é pra frente)
+
+
+nome = input("Nome: ")
+ano_nascimento = int(input("Ano de nascimento: "))
+cidade = input("Cidade: ")
+saldo = float(input("Saldo bancário: "))
+
+possui_cartao = True
+idade = 2025 - ano_nascimento
+
+print(
+    f"Nome: {nome}\n"
+    f"Idade: {idade}\n"
+    f"Cidade: {cidade}\n"
+    f"Saldo bancário: R${saldo:.2f}\n"
+    f"Possui cartão: {possui_cartao}"
+)
+
+
+'''

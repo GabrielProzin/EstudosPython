@@ -17,9 +17,22 @@ esta_estudando_python = True
 print(f"Eu me chamo {nome}, tenho {idade} anos e tenho {altura} centímetros de altura, e {esta_estudando_python}")
 
 
-#output:
-#PS C:\Users\Gabriel Mendes\Desktop\EstudosPython> & "C:/Users/Gabriel Mendes/AppData/Local/Programs/Python/Python313/python.exe" "c:/Users/Gabriel Mendes/Desktop/EstudosPython/Estudos/Semana 1/Dia1.py"
-#Digite o seu nome: Gabriel
-#Digite a sua idade: 21
-#Digite a sua altura em centímetros: 175
-#Eu me chamo Gabriel, tenho 21 anos e tenho 175 centímetros de altura, e True  
+'''
+CORREÇÕES // MELHORIAS
+
+🔧 Melhorias opcionais
+
+-altura deveria ser float e não int, para permitir valores como 175.5
+-O booleano esta_estudando_python poderia ser exibido de forma mais amigável
+-Pode colocar tudo em uma única linha de input se quiser simplificar
+
+nome = input("Nome: ")
+idade = int(input("Idade: "))
+altura = float(input("Altura (cm): "))
+
+esta_estudando_python = True
+
+print(f"{nome}, {idade} anos, {altura} cm de altura — estudando Python: {esta_estudando_python}")
+
+
+'''

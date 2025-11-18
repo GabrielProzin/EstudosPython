@@ -39,3 +39,47 @@ elif numero2 == numero3:
     print("o segundo e o terceiro numero sao iguais")
 else:
     print("nao possui numeros iguais")
+
+
+'''
+CORREÇÕES // MELHORIAS
+
+🔧 Melhorias
+
+-Seu código funciona, mas repete bastante coisa
+-Pode reduzir verificações repetidas
+-O bloco que verifica números iguais pode ser mais elegante com um único if
+
+
+a = int(input("Primeiro número: "))
+b = int(input("Segundo número: "))
+c = int(input("Terceiro número: "))
+
+# Maior
+if a > b and a > c:
+    maior = a
+elif b > a and b > c:
+    maior = b
+else:
+    maior = c
+
+# Menor
+if a < b and a < c:
+    menor = a
+elif b < a and b < c:
+    menor = b
+else:
+    menor = c
+
+print(f"Maior número: {maior}")
+print(f"Menor número: {menor}")
+
+# Iguais
+if a == b or a == c or b == c:
+    print("Existe pelo menos um número igual.")
+else:
+    print("Não existem números iguais.")
+
+
+
+'''

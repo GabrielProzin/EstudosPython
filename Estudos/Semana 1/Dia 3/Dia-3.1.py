@@ -29,11 +29,23 @@ resultadoRestoDivisao = a % b
 print(f"O resultado da resto da divisão entre os dois números é: {resultadoRestoDivisao}")
 
 
-#output:
-#PS C:\Users\Gabriel Mendes\Desktop\EstudosPython> & "C:/Users/Gabriel Mendes/AppData/Local/Programs/Python/Python313/python.exe" "c:/Users/Gabriel Mendes/Desktop/EstudosPython/Estudos/Semana 1/Dia 3/Dia-3.1.py"
-#Digite o primeiro número: 10
-#Digite o segundo núemro: 5
-#O resultado da soma entre os dois números é: 15
-#O resultado da multiplicação entre os dois números é: 50
-#O resultado da divisão entre os dois números é: 2.0     
-#O resultado da resto da divisão entre os dois números é: 0
+'''
+CORREÇÕES // MELHORIAS
+
+🔧 Melhorias
+
+-Você criou as variáveis antes do input, mas elas não eram necessárias
+-O código pode ser reduzido pela metade
+-Visite uma lógica mais compacta
+
+
+a = int(input("Digite o primeiro número: "))
+b = int(input("Digite o segundo número: "))
+
+print(f"Soma: {a + b}")
+print(f"Multiplicação: {a * b}")
+print(f"Divisão: {a / b}")
+print(f"Resto da divisão: {a % b}")
+
+
+'''

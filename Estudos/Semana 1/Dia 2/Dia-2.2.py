@@ -19,12 +19,27 @@ valor_em_estoque = quantidade_em_estoque * preco
 print(f"Produto: {nome}\n Preço: {preco}\n Quantidade disponível: {quantidade_em_estoque}\n Valor total em estoque: {valor_em_estoque}")
 
 
-#output:
-#PS C:\Users\Gabriel Mendes\Desktop\EstudosPython> & "C:/Users/Gabriel Mendes/AppData/Local/Programs/Python/Python313/python.exe" "c:/Users/Gabriel Mendes/Desktop/EstudosPython/Estudos/Semana 1/Dia-2.2.py"
-#Digite o nome do produto: bola
-#Digite o preço do produto: 2 
-#Quantidade de produtos no estoque: 500
-#Produto: bola
-#Preço: 2.0
-#Quantidade disponível: 500
-#Valor total em estoque: 1000.0
+'''
+CORREÇÕES // MELHORIAS
+
+🔧 Melhorias
+
+-str() no input é desnecessário (input já é string)
+-Pode formatar valores em dinheiro com 2 casas decimais
+-Pode alinhar melhor o print
+
+
+nome = input("Nome do produto: ")
+preco = float(input("Preço do produto: "))
+quantidade = int(input("Quantidade em estoque: "))
+
+total = preco * quantidade
+
+print(
+    f"Produto: {nome}\n"
+    f"Preço unitário: R${preco:.2f}\n"
+    f"Quantidade disponível: {quantidade}\n"
+    f"Valor total em estoque: R${total:.2f}"
+)
+
+'''

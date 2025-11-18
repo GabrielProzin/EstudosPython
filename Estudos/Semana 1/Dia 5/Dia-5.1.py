@@ -16,3 +16,18 @@ elif idade >= 18 and idade <= 60:
     print("voce é maior de idade")
 else:
     print("voce é idoso")
+
+
+'''
+CORREÇÕES // MELHORIAS
+
+🔧 Melhoria
+
+No segundo elif, você usou idade >= 18 and idade <= 60
+Mas pode simplificar usando operador BETWEEN:
+
+
+18 <= idade < 60
+
+
+'''

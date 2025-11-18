@@ -27,3 +27,30 @@ print(f"valor pago: R${valorPago}")
 print(f"valor do troco: R${troco}")
 print(f"pagamento exato? {pagamentoExato}")
 print(f"o cliente esta devendo? {estaDevendo}")
+
+
+'''
+CORREÇÕES // MELHORIAS
+
+🔧 Melhorias
+
+Formatar valores monetários
+Um print mais organizado
+
+
+nome = input("Nome do cliente: ")
+compra = float(input("Valor da compra: R$"))
+pago = float(input("Valor pago: R$"))
+
+troco = pago - compra
+
+print(f"\nCliente: {nome}")
+print(f"Compra: R${compra:.2f}")
+print(f"Pago: R${pago:.2f}")
+print(f"Troco: R${troco:.2f}")
+
+print(f"Pagamento exato? {troco == 0}")
+print(f"O cliente está devendo? {pago < compra}")
+
+
+'''

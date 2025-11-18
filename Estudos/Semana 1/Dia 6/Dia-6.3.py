@@ -22,3 +22,27 @@ while True:
         print("Acesso liberado")
         break
     print("Acesso negado")
+
+
+'''
+CORREÇÕES // MELHORIAS
+    
+OTIMIZAÇÃO:
+
+senha_correta = "4321"
+
+while True:
+    entrada = input("Digite a senha ('sair' para encerrar): ")
+
+    if entrada == "sair":
+        print("Encerrando...")
+        break
+
+    if entrada == senha_correta:
+        print("Acesso liberado")
+        break
+
+    print("Acesso negado")
+
+    
+'''

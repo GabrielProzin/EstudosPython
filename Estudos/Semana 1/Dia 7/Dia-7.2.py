@@ -31,3 +31,44 @@ while True:
         else: 
             print(f"O maior número dos três é: {n3}")
             break
+
+
+'''
+CORREÇÕES // MELHORIAS
+
+🔧 Melhorias:
+
+Usuário precisa escrever exatamente “maior número”
+→ Melhor padronizar para: “maior”
+Pode transformar as opções em minúsculas para evitar erros
+Você pode reduzir vários break repetidos
+
+
+n1 = int(input("Primeiro número: "))
+n2 = int(input("Segundo número: "))
+n3 = int(input("Terceiro número: "))
+
+while True:
+    op = input("Você quer somar, multiplicar ou maior? ").lower()
+
+    if op == "somar":
+        print(n1 + n2 + n3)
+        break
+
+    elif op == "multiplicar":
+        print(n1 * n2 * n3)
+        break
+
+    elif op == "maior":
+        maior = n1
+        if n2 > maior: maior = n2
+        if n3 > maior: maior = n3
+        print(f"O maior número é {maior}")
+        break
+
+    else:
+        print("Opção inválida. Tente novamente.")
+
+
+
+'''
