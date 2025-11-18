@@ -9,7 +9,7 @@ Exiba a última fruta
 Mostre quantos itens existem na lista usando len()
 '''
 
-fruta = ["amora", "banana", "uva", "limão", "morango"]
-print(fruta[0])
-print(fruta[4])
-print(len(fruta))
+frutas = ["amora", "banana", "uva", "limão", "morango"]
+print(frutas[0])
+print(frutas[-1])
+print(len(frutas))
