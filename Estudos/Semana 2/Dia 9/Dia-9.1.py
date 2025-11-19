@@ -9,3 +9,9 @@ idade
 cidade
 Depois exiba cada elemento separadamente.
 '''
+
+tupla = ("Gabriel", 21, "Goiania")
+
+print(tupla[0])
+print(tupla[1])
+print(tupla[2])
