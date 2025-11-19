@@ -27,6 +27,6 @@ print(f"Lista atualizada: {lista_compras}")
 
 produto = input("Digite o nome do produto para verificar: ")
 if produto in lista_compras:
-    print(f"O produto {produto} está inserido na lista!")
+    print(f"O produto {produto} está inserido na lista")
 else:
     print(f"O produto {produto} NÃO está na lista!")

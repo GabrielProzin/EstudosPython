@@ -17,14 +17,38 @@ Ao final, exiba quantas tarefas foram adicionadas no total.
 '''
 
 tarefas = []
+contadorTarefas = 0
+
+adicionarTarefa = input("Adicionar tarefa: ")
+tarefas.append(adicionarTarefa)
+contadorTarefas += 1
 
 while True:
-    evento = input("Adicione uma tarefa: ")
+    evento = input("Você quer adicionar, remover, ver as tarefas ou sair? ")
+
     if evento.lower() == 'adicionar':
         adicionarTarefa = input("Digite o nome da tarefa: ")
         tarefas.append(adicionarTarefa)
         print(f"{adicionarTarefa} adicionado com sucesso!")
-        print("")
-    elif evento.lower() == 'remover':
-        removerTarefa = input("Digite o nome da tarefa que deseja remover")
+        print(tarefas)
+        contadorTarefas += 1
         
+    if evento.lower() == 'remover':
+        removerTarefa = input("Digite o nome da tarefa que deseja remover: ")
+
+        if removerTarefa in tarefas:
+            tarefas.remove(removerTarefa)
+            print(f"{removerTarefa} removido com sucesso!")
+            contadorTarefas -= 1
+            print(tarefas)
+
+        else:
+            print("Tarefa não encontrada")
+
+    if evento.lower() == 'ver':
+        print(f"Essa é a sua lista de tarefas: {tarefas}")
+    
+    if evento.lower() == 'sair':
+        print(f"Foi adicionado ao total {contadorTarefas} tarefas")
+        break
+    
