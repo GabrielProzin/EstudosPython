@@ -6,3 +6,10 @@ Crie uma função chamada saudar() que recebe um nome como parâmetro e imprime:
 Olá, [nome], seja bem-vindo ao sistema!
 Depois chame a função passando seu nome.
 '''
+
+nome = input("Digite o seu nome: ")
+
+def saudar():
+    print(f"Olá {nome}, seja bem-vindo ao sistema!")
+
+saudar()
