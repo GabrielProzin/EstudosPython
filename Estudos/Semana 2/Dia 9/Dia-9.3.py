@@ -25,28 +25,28 @@ soma = 0
 lista_alunos = []
 
 for num in range(3):
-    alunos = {}
+    aluno = {}
 
-    alunos["nome"] = input("Digite o nome do aluno: ")
-    alunos["idade"] = int(input("Digite a idade do aluno: "))
-    alunos["nota"] = float(input("Digite a nota do aluno: "))
-    lista_alunos.append(alunos)
-
-for aluno in lista_alunos:
-    soma += int(aluno["nota"])
+    aluno["nome"] = input("Digite o nome do aluno: ")
+    aluno["idade"] = int(input("Digite a idade do aluno: "))
+    aluno["nota"] = float(input("Digite a nota do aluno: "))
+    lista_alunos.append(aluno)
 
 for aluno in lista_alunos:
+    nota = aluno["nota"]
+    soma += nota
 
-    if aluno[2]["nota"] < aluno[0]["nota"] > aluno[1]["nota"]:
-        print("A maior nota é do aluno: ", aluno[0]["nome"])
-
-    elif aluno[0]["nota"] < aluno[1]["nota"] > aluno[2]["nota"]:
-        print("A maior nota é do aluno: ", aluno[1]["nome"])
-    else:
-        print("A maior nota é do aluno: ", aluno[2]["nome"])
-
-media = soma / 3
+media = soma / len(lista_alunos)
 
 print(f"A média de nota dos alunos é {media:.2f}")
-print(lista_alunos)
 
+for aluno in lista_alunos:
+    print(aluno["nome"])
+
+maior = lista_alunos[0]
+
+for aluno in lista_alunos:
+    if aluno["nota"] > maior["nota"]:
+        maior = aluno
+
+print(f"O aluno {maior["nome"]} tem a maior nota {maior["nota"]}")
