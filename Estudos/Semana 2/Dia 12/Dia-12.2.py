@@ -12,7 +12,7 @@ ou “Errou! O número era X”
 '''
 import random
 
-aleatorio = random.randrange(6)
+aleatorio = random.randrange(1, 101)
 numero = 0
 
 numero = int(input("Digite um numero de 1 a 5: "))
