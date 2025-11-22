@@ -12,3 +12,13 @@ No final, imprima o valor global
 
 O objetivo é entender a diferença entre variáveis globais e locais.
 '''
+
+
+contador  = 0
+
+def incrementar():
+    contador = 10
+    print(f"{contador}")
+print(f"{contador}")
+
+incrementar()
