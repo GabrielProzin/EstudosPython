@@ -14,3 +14,19 @@ ler dois números
 somá-los
 exibir o resultado
 '''
+n1 = 0.0
+n2 = 0.0
+
+def ler_numero(n1 ,n2):
+    resultado = n1 + n2
+    print(f"A soma dos numeros eh: {resultado}")
+
+while True:
+    try:
+        n1 = float(input("Digite um número: "))
+        n2 = float(input("Digite outro número: "))
+        break
+    except ValueError:
+        print("Digite somente numeros! \n" )
+
+ler_numero(n1, n2)
