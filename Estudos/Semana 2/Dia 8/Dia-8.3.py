@@ -39,7 +39,6 @@ while True:
         if removerTarefa in tarefas:
             tarefas.remove(removerTarefa)
             print(f"{removerTarefa} removido com sucesso!")
-            contadorTarefas -= 1
             print(tarefas)
 
         else:
