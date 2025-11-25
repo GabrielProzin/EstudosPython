@@ -23,6 +23,7 @@ João - média 4.7 - Reprovado
 '''
 
 alunos = []
+soma = 0
 
 def cadastrar_aluno(nome, nota1, nota2, nota3):
     return {
@@ -31,6 +32,13 @@ def cadastrar_aluno(nome, nota1, nota2, nota3):
         "nota2": nota2,
         "nota3": nota3
     }
+
+
+def calcular_media(nota1, nota2, nota3):
+    media = (nota1 + nota2 + nota3) / 3
+    return media
+
+
 
 while True:
     print("Escolha alguma das seguintes opções: \n")
@@ -45,4 +53,12 @@ while True:
         nota3 = float(input("Digite a terceira nota: "))
 
         alunos.append(cadastrar_aluno(nome, nota1, nota2, nota3))
+    if opcao == 2:
+        print("Finalizando o cadastro dos alunos!")
+        break
 
+
+alunos["media"] = calcular_media(nota1, nota2, nota3)
+
+print(alunos)
+    
