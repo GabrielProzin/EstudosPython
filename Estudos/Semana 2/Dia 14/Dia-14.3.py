@@ -35,9 +35,18 @@ def cadastrar_aluno(nome, nota1, nota2, nota3):
 
 
 def calcular_media(nota1, nota2, nota3):
-    media = (nota1 + nota2 + nota3) / 3
-    return media
+    return (nota1 + nota2 + nota3) / 3
 
+
+def situacao(media):
+    if media >= 8:
+        return "Aprovado"
+    
+    elif media > 6:
+        return "Recuperação"
+    
+    else:
+        return "Reprovado"
 
 
 while True:
@@ -58,7 +67,8 @@ while True:
         break
 
 
-alunos["media"] = calcular_media(nota1, nota2, nota3)
+for aluno in alunos:
+    media = calcular_media(aluno["nota1"], aluno["nota2"], aluno["nota3"])
+    status = situacao(media)
 
-print(alunos)
-    
+    print(f"{aluno['nome']} = média {media:.1f} - {status}")
