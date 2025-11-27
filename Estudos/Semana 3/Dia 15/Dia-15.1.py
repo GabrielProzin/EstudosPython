@@ -11,7 +11,9 @@ Requisitos:
 Usar with open(...) tanto para escrever quanto para ler.
 Mostrar mensagens amigáveis no console.
 '''
+arquivo = input("Digite o nome do arquivo que voce deseja criar: ")
+frase = input("Digite a frase que deseja colocar dentro do arquivo: ")
 
-with open("AnotaçõesPython.txt", "r") as f:
-    conteudo = f.read()
+with open(arquivo, "x") as f:
+    conteudo = f(frase)
     print(conteudo)
