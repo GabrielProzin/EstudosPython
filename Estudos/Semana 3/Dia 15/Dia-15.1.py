@@ -15,5 +15,5 @@ arquivo = input("Digite o nome do arquivo que voce deseja criar: ")
 frase = input("Digite a frase que deseja colocar dentro do arquivo: ")
 
 with open(arquivo, "x") as f:
-    conteudo = f(frase)
+    conteudo = f.write(frase)
     print(conteudo)
