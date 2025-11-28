@@ -11,9 +11,14 @@ Requisitos:
 Usar with open(...) tanto para escrever quanto para ler.
 Mostrar mensagens amigáveis no console.
 '''
-arquivo = input("Digite o nome do arquivo que voce deseja criar: ")
+nomeArquivo = input("Digite o nome do arquivo que voce deseja criar: ")
+arquivo = nomeArquivo + '.txt'
+print(arquivo)
 frase = input("Digite a frase que deseja colocar dentro do arquivo: ")
 
-with open(arquivo, "x") as f:
+with open(arquivo, "w") as f:
     conteudo = f.write(frase)
-    print(conteudo)
+
+
+with open(arquivo, "r") as f:
+    print(f.read())
