@@ -25,3 +25,16 @@ Usar dicionários para contar logins por usuário.
 Ignorar linhas vazias ou malformadas (usar try/except ou if pra validar o formato básico).
 Fechar todos arquivos com with.
 '''
+
+linhasAcessosLOG = []
+contadorLogin = 0
+
+with open("acessos.log", "r") as f:
+
+    for linha in f:
+        if linha.strip() == "":
+            continue
+        print(linha)
+
+
+print(linhasAcessosLOG)

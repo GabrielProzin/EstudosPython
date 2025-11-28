@@ -5,13 +5,10 @@ Dado o dicionário:
 
 produto = {"nome": "Copo", "preco": 10, "estoque": 50}
 
-
 Exiba:
 
 o nome do produto
-
 o preço
-
 o estoque
 '''
 produto = {"nome": "Copo", "preco": 10, "estoque": 50}

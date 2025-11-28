@@ -1,0 +1,30 @@
+2025-01-10 09:15:23 - usuario: gabriel - acao: login
+2025-01-10 09:20:10 - usuario: maria - acao: login
+2025-01-10 09:35:01 - usuario: gabriel - acao: logout
+2025-01-10 10:01:44 - usuario: joao - acao: login
+2025-01-10 10:15:00 - usuario: maria - acao: logout
+2025-01-10 10:17:32 - usuario: gabriel - acao: login
+2025-01-10 10:18:40 - usuario: maria - acao: login
+2025-01-10 11:02:19 - usuario: joao - acao: logout
+
+# linha malformada abaixo (sem acao)
+2025-01-10 11:20:00 - usuario: gabriel
+
+# linha malformada abaixo (sem usuario)
+2025-01-10 11:21:10 - acao: login
+
+# linha completamente inválida
+isso aqui não é um log válido
+
+2025-01-10 12:00:33 - usuario: maria - acao: login
+2025-01-10 12:30:55 - usuario: gabriel - acao: login
+2025-01-10 12:45:10 - usuario: carla - acao: login
+
+# linha vazia abaixo
+
+2025-01-10 14:00:00 - usuario: joao - acao: login
+2025-01-10 14:05:12 - usuario: maria - acao: login
+2025-01-10 14:15:43 - usuario: carla - acao: logout
+2025-01-10 15:00:22 - usuario: gabriel - acao: login
+2025-01-10 15:40:55 - usuario: gabriel - acao: login
+2025-01-10 16:00:00 - usuario: pedro - acao: login
