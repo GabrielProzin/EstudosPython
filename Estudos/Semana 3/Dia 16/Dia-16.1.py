@@ -18,3 +18,14 @@ Requisitos:
 Usar csv.reader.
 Ignorar o cabeçalho (nome,nota).
 '''
+
+import csv
+
+with open("alunos.csv", "r") as f:
+    leitor = csv.reader(f)
+    next(leitor)
+    
+    for linha in leitor:
+        nome = linha[0]
+        nota = linha[1]
+        print(f"Aluno {nome} tirou {nota}")

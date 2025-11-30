@@ -36,3 +36,41 @@ Requisitos:
 Usar dicionários para mapear por id.
 Tratar se algum id existir em um arquivo e não no outro (por exemplo, pular ou marcar "email": null).
 '''
+
+import csv
+import json
+
+alunos_csv = []
+alunos_json = []
+mapa_json = {}
+alunos_completo_json = []
+
+with open("alunos_notas.csv", "r", encoding="utf-8") as arquivo_csv:
+    leitor_arquivo_csv = csv.DictReader(arquivo_csv)
+
+    for linha in leitor_arquivo_csv:
+        alunos_csv.append({"id": int(linha["id"]), "nome": linha["nome"], "nota": linha["nota"]})
+print("csv:", alunos_csv)
+
+with open("alunos_info.json", "r", encoding="utf-8") as arquivo_json:
+    leitor_arquivo_json = json.load(arquivo_json)
+
+    for linha in leitor_arquivo_json:
+        mapa_json[linha["id"]] = linha["email"]
+print("json:", mapa_json)
+
+for aluno in alunos_csv:
+    id_atual = aluno["id"]
+
+    alunos_completo_json.append({
+        "id": id_atual,
+        "nome": aluno["nome"],
+        "nota": aluno["nota"],
+        "email": mapa_json.get(id_atual, None)
+    })
+
+
+with open("alunos_completo.json", "w", encoding="utf-8") as alunos_completo:
+    json.dump(alunos_completo_json, alunos_completo, indent=4)
+
+print("Arquivo alunos_completo.json criado com sucesso!")

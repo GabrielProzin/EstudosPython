@@ -20,3 +20,18 @@ Requisitos:
 Usar csv.DictReader (para já vir com chaves).
 Usar json.dump(..., indent=4) para deixar bonito.
 '''
+
+import csv
+import json
+
+alunos = []
+
+with open("alunos.csv", "r", encoding="utf-8") as f:
+    leitor = csv.DictReader(f)
+
+    for linha in leitor:
+        alunos.append({"nome": linha["nome"], "nota": float(linha["nota"])})
+
+with open("alunos.json", "w", encoding="utf-8") as f:
+    json.dump(alunos, f, indent=4)
+print("Arquivo alunos.json criado com sucesso!")
