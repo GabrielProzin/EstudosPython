@@ -1,0 +1,6 @@
+--- RELAT�RIO DE ACESSOS ---
+gabriel - 5
+maria - 4
+joao - 2
+carla - 1
+pedro - 1
