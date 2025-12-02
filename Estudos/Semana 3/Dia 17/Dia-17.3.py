@@ -31,3 +31,26 @@ Requisitos:
 
 Usar groupby, sum() e sort_values().
 '''
+
+import pandas as pd
+
+vendas = pd.read_csv("vendas.csv")
+
+vendas["valor_total"] = vendas["quantidade"] * vendas["preco_unitario"]
+
+print(f"O total de vendas foi de: R${vendas['valor_total'].sum():.2f}\n")
+
+qntd_categoria = vendas.groupby("categoria")["quantidade"].sum()
+print(qntd_categoria)
+
+produto_mais_vendido = vendas.groupby("produto")["quantidade"].sum().idxmax()
+print(produto_mais_vendido)
+
+receita_por_produto = vendas.groupby("produto")["valor_total"].sum()
+produto_maior_receita = receita_por_produto.idxmax()
+print(f"Produto que mais gerou receita: {produto_maior_receita}")
+
+resumo = vendas.groupby("categoria").agg(qtd_total = ("quantidade", "sum"), valor_total = ("valor_total", "sum"))
+resumo = resumo.reset_index()
+resumo.to_csv("resumo_categoria.csv", index=False)
+
