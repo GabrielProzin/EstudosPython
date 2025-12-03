@@ -5,7 +5,7 @@ import time
 pyautogui.PAUSE = 0.3
 
 while True:
-    pyautogui.click(x=917, y=762)
+    pyautogui.click(x=910, y=763)
     pyautogui.write('Louco?')
     pyautogui.press("enter")
     pyautogui.write('Eu ja fui louco uma vez')
