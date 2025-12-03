@@ -17,3 +17,15 @@ Requisitos:
 
 Usar np.array e funções do próprio NumPy (mean, min, max).
 '''
+
+import numpy as np
+
+idades = np.array([1, 2, 3, 4, 5])
+
+print(f"A média das idades é: {np.mean(idades)}")
+print(f"A menor idade é: {np.min(idades)}")
+print(f"A maior idade é: {np.max(idades)}")
+
+soma_idades = idades + 1
+
+print(f"A idade no próximo ano é: {soma_idades}")
