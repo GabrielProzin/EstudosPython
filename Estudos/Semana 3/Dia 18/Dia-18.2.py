@@ -22,3 +22,22 @@ Requisitos:
 Usar axis=0 e axis=1 nas funções de NumPy.
 Usar np.argmax para localizar o índice da maior nota.
 '''
+
+import numpy as np
+
+notas = np.array([
+    [7.5, 8.0, 6.5],
+    [5.0, 6.0, 7.0],
+    [9.0, 8.5, 9.5],
+    [4.0, 5.5, 6.0]
+])
+
+media_alunos = np.mean(notas, axis=1)
+print(media_alunos)
+
+media_prova = np.mean(notas, axis=0)
+print(media_prova)
+
+maior_nota = np.argmax(notas)
+linha, coluna = np.unravel_index(maior_nota, notas.shape)
+print(f"A maior nota é {notas[linha, coluna]} e está no índice: {maior_nota}")   
