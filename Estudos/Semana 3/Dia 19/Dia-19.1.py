@@ -20,7 +20,7 @@ dias = ["Seg", "Ter", "Qua", "Qui", "Sex", "Sáb", "Dom"]
 horas = [1, 2, 0, 3, 2.5, 4, 1.5]
 
 plt.plot(dias, horas)
-plt.title("Horas de estudo")
-plt.xlabel("Horas")
-plt.ylabel("Dias da semana")
+plt.title("Quantidade de horas que uso calcinha no dia")
+plt.xlabel("Dias da semana")
+plt.ylabel("Horas")
 plt.show()

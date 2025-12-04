@@ -20,10 +20,17 @@ import matplotlib.pyplot as plt
 nomes = ["Ana", "Carlos", "João", "Maria"]
 medias = [8.5, 6.0, 4.7, 9.2]
 
-red = ["red"]
+cores = []
 
-plt.bar(nomes, medias, color=red >= 7)
+for notas in medias:
+    if notas >= 9:
+        cores.append("green")
+    elif notas >= 7:
+        cores.append("blue")
+    else:
+        cores.append("red")
+
+plt.bar(nomes, medias, color=cores)
 plt.title("Boletim da Turma")
 plt.xticks(rotation=30)
 plt.show()
-
