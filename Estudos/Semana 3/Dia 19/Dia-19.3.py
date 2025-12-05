@@ -34,14 +34,12 @@ x_ponto = meses[indice_maior]
 y_ponto = vendas_2025[indice_maior]
 
 
-
-
 plt.plot(meses, vendas_2024, label="2024")
 plt.plot(meses, vendas_2025, label="2025")
 plt.annotate(
     "maior venda",
-    xy=(x_ponto, y_ponto),       # ponto que será apontado
-    xytext=(x_ponto, y_ponto + 100),   # posição onde o texto vai ficar
+    xy=(x_ponto, y_ponto),
+    xytext=(x_ponto, y_ponto + 100),
     arrowprops={"arrowstyle": "->"}
 )
 plt.legend()
