@@ -26,8 +26,6 @@ with open("notas_alunos.csv", "r", encoding="utf-8") as file:
     dados["media"] = ((dados["nota1"] + dados["nota2"] + dados["nota3"]) / 3).round(1)
     media = dados[["nome", "media"]]
 
-print(media)
-
 media.to_csv("medias.csv", index=False)
 
 aprovados = []
@@ -38,12 +36,11 @@ with open("medias.csv", "r") as file:
     for indice, linha in medias.iterrows():
         nome = linha["nome"]
         media = linha["media"]
+
         if media >= 7:
             aprovados.append(nome)
-        with open("aprovados.txt", "w") as file:
-            for aluno in aprovados:
-                file.write(aluno + "\n")
-
-print(aprovados)
 
 
+with open("aprovados.txt", "w") as file:
+    for aluno in aprovados:
+        file.write(aluno + "\n")
