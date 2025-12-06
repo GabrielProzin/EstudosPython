@@ -9,9 +9,9 @@ Ler o CSV com Pandas.
 
 Analisar:
 
-total de vendas no período;
-mês com maior faturamento;
-categoria com mais vendas.
+total de vendas no período; 🟢
+mês com maior faturamento; 🟢
+categoria com mais vendas.🟢
 
 Criar:
 
@@ -30,21 +30,31 @@ vendas = pd.read_csv("vendas_completo.csv", sep=",", encoding="utf-8")
 
 vendas["data"] = pd.to_datetime(vendas["data"])
 
-#print(vendas["data"].dtype)
-
 vendas["mes"] = vendas["data"].dt.month
 vendas["total"] = vendas["quantidade"] * vendas["preco_unitario"]
+
 vendas["total_vendas"] = vendas.groupby("mes")["total"].sum()
 
-#print(vendas["total_vendas"].max())
-
 categoria_mais_vendida = vendas.groupby("categoria")["quantidade"].sum()
+total_vendas = vendas.groupby("mes")["total"].sum()
+maior_faturamento_categoria = vendas["total_vendas"].max()
 
-#print(categoria_mais_vendida.idxmax())
 
-plt.plot(categoria_mais_vendida)
-plt.xlabel("Categorias")
-plt.ylabel("Vendas")
-#plt.plot()
-plt.title("Total de vendas por categoria")
-plt.show()
+# print(f"Total de vendas no período: ")
+# print(f"{total_vendas}")
+# print(f"Mês com o maior faturamento é de: {vendas["total_vendas"].max()}")
+# print(f"Categoria com mais vendas: {categoria_mais_vendida.idxmax()}")
+
+
+# plt.plot(categoria_mais_vendida)
+# plt.xlabel("Categorias")
+# plt.ylabel("Vendas")
+# plt.title("Total de vendas por categoria")
+# plt.show()
+
+# total por periodo:
+
+total_periodo = "\n".join(f"{mes}: {valor}" for mes, valor in total_vendas.items())
+
+with open("resumo.txt", "w") as file:
+    file.write(total_periodo)
