@@ -1,0 +1,35 @@
+data,produto,categoria,quantidade,preco_unitario
+2025-01-05,Notebook X200,Eletrônicos,2,3500
+2025-01-08,Mouse M120,Periféricos,5,45
+2025-01-10,Monitor 27P,Eletrônicos,3,1450
+2025-01-12,Cadeira Gamer Y,Móveis,1,1100
+2025-01-15,Teclado T500,Periféricos,4,120
+2025-01-20,Mesa Escritório Z,Móveis,1,850
+2025-01-25,Notebook X200,Eletrônicos,1,3500
+
+2025-02-03,Monitor 27P,Eletrônicos,2,1450
+2025-02-06,Mouse M120,Periféricos,8,45
+2025-02-08,Teclado T500,Periféricos,6,120
+2025-02-10,Webcam W300,Periféricos,3,210
+2025-02-14,Cadeira Gamer Y,Móveis,2,1100
+2025-02-18,Notebook X200,Eletrônicos,1,3500
+2025-02-22,Mesa Escritório Z,Móveis,1,850
+2025-02-28,Mouse M120,Periféricos,12,45
+
+2025-03-01,Notebook X400,Eletrônicos,1,4800
+2025-03-04,Monitor 27P,Eletrônicos,4,1450
+2025-03-06,Mouse M120,Periféricos,7,45
+2025-03-10,Cadeira Gamer Y,Móveis,1,1100
+2025-03-12,Teclado T500,Periféricos,10,120
+2025-03-15,Headset H300,Periféricos,5,260
+2025-03-20,Mesa Escritório Z,Móveis,2,850
+2025-03-27,Notebook X200,Eletrônicos,1,3500
+
+2025-04-02,Monitor 32U,Eletrônicos,3,2200
+2025-04-05,Mouse M120,Periféricos,9,45
+2025-04-07,Teclado T500,Periféricos,8,120
+2025-04-11,Webcam W300,Periféricos,4,210
+2025-04-15,Cadeira Gamer Y,Móveis,1,1100
+2025-04-18,Notebook X400,Eletrônicos,1,4800
+2025-04-22,Mesa Escritório Z,Móveis,1,850
+2025-04-28,Headset H300,Periféricos,6,260
