@@ -26,35 +26,53 @@ gráfico em arquivo de imagem grafico_vendas.png.
 import pandas as pd
 import matplotlib.pyplot as plt
 
+# Leitura
 vendas = pd.read_csv("vendas_completo.csv", sep=",", encoding="utf-8")
 
+# Tratamento
 vendas["data"] = pd.to_datetime(vendas["data"])
-
 vendas["mes"] = vendas["data"].dt.month
 vendas["total"] = vendas["quantidade"] * vendas["preco_unitario"]
 
-vendas["total_vendas"] = vendas.groupby("mes")["total"].sum()
-
-categoria_mais_vendida = vendas.groupby("categoria")["quantidade"].sum()
+# Agrupamentos
 total_vendas = vendas.groupby("mes")["total"].sum()
-maior_faturamento_categoria = vendas["total_vendas"].max()
+categoria_mais_vendida = vendas.groupby("categoria")["quantidade"].sum().idxmax()
+mes_maior_faturamento = total_vendas.idxmax()
 
+# ============================
+# GERAÇÃO DO GRÁFICO POR CATEGORIA
+# ============================
+vendas_categoria = vendas.groupby("categoria")["total"].sum()
 
-# print(f"Total de vendas no período: ")
-# print(f"{total_vendas}")
-# print(f"Mês com o maior faturamento é de: {vendas["total_vendas"].max()}")
-# print(f"Categoria com mais vendas: {categoria_mais_vendida.idxmax()}")
+plt.figure(figsize=(8, 5))
+plt.bar(vendas_categoria.index, vendas_categoria.values)
+plt.xlabel("Categoria")
+plt.ylabel("Total de Vendas (R$)")
+plt.title("Total de Vendas por Categoria")
+plt.xticks(rotation=45)
+plt.tight_layout()
+plt.savefig("grafico_vendas.png")
+plt.close()
 
+# ============================
+# GERAÇÃO DO TEXTO DE RESUMO
+# ============================
 
-# plt.plot(categoria_mais_vendida)
-# plt.xlabel("Categorias")
-# plt.ylabel("Vendas")
-# plt.title("Total de vendas por categoria")
-# plt.show()
+# total por mês
+total_periodo = "\n".join(
+    f"Mês {mes}: R${valor:.2f}" for mes, valor in total_vendas.items()
+)
 
-# total por periodo:
+mais_vendido = f"A categoria mais vendida foi: {categoria_mais_vendida}"
+maior_faturamento = (
+    f"\nO mês de maior faturamento foi o mês {mes_maior_faturamento} "
+    f"com R${total_vendas[mes_maior_faturamento]:.2f}"
+)
 
-total_periodo = "\n".join(f"{mes}: {valor}" for mes, valor in total_vendas.items())
-
-with open("resumo.txt", "w") as file:
+with open("resumo_vendas.txt", "w", encoding="utf-8") as file:
+    file.write("Total de vendas no período:\n")
     file.write(total_periodo)
+    file.write("\n\n")
+    file.write(maior_faturamento)
+    file.write("\n")
+    file.write(mais_vendido)

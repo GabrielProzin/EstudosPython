@@ -1,4 +1,9 @@
-1: 17505
-2: 11700
-3: 19715
-4: 17115
+Total de vendas no período:
+Mês 1: R$17505.00
+Mês 2: R$11700.00
+Mês 3: R$19715.00
+Mês 4: R$17115.00
+
+
+O mês de maior faturamento foi o mês 3 com R$19715.00
+A categoria mais vendida foi: Periféricos
