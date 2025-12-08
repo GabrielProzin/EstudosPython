@@ -18,3 +18,8 @@ Salva:
 gráfico com nome relatorio_<produto>.png;
 CSV filtrado como vendas_<produto>.csv.
 '''
+
+import pandas as pd
+
+mostrar_produtos  = []
+produto_digitado = input("Digite o nome do produto:")
