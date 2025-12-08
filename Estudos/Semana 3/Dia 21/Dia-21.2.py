@@ -10,10 +10,28 @@ preco_unitario
 
 Faça:
 
-Calcular valor_total.
+Calcular valor_total. 🟢
 Agrupar por produto e descobrir:
-total vendido por produto;
+total vendido por produto; 🟢
 produto mais vendido (em valor).
 Gerar um gráfico de barras com produto x valor_total.
 Salvar o gráfico como vendas_por_produto.png.
 '''
+
+import pandas as pd
+import matplotlib.pyplot as plt
+
+with open("vendas_completo.csv", "r", encoding="utf-8") as file:
+    vendas = pd.read_csv(file)
+    vendas["total"] = vendas["quantidade"] * vendas["preco_unitario"]
+    valor_total = vendas["total"].sum()
+    print(f"O valor total de vendas é R${valor_total}")
+
+    valor_total_produto = vendas.groupby("produto")["total"].sum()
+    print("\nO valor total vendido por produto é: \n")
+    print(valor_total_produto)
+
+
+    vendas["valor_total"] = vendas.groupby("produto")["total"].sum()
+    #produto_mais_vendido = vendas["valor_total"].idxmax()
+    print(vendas["valor_total"])
