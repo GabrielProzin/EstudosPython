@@ -31,7 +31,13 @@ with open("vendas_completo.csv", "r", encoding="utf-8") as file:
     print("\nO valor total vendido por produto é: \n")
     print(valor_total_produto)
 
+    produto_mais_vendido = vendas.groupby("produto")["total"].sum()
+    print(f"Produto mais vendido em valor: R${produto_mais_vendido.max()}")
 
-    vendas["valor_total"] = vendas.groupby("produto")["total"].sum()
-    #produto_mais_vendido = vendas["valor_total"].idxmax()
-    print(vendas["valor_total"])
+
+    plt.bar(produto_mais_vendido.index, produto_mais_vendido.values)
+    plt.xlabel("Produto")
+    plt.ylabel("Valor total")
+    plt.title("Valor total de vendas por produto")
+    plt.savefig("vendas_por_produto.png")
+    plt.show()
