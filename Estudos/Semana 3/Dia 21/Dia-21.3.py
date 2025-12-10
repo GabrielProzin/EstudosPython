@@ -21,13 +21,14 @@ CSV filtrado como vendas_<produto>.csv.
 
 import pandas as pd
 import matplotlib.pyplot as plt
+import unicodedata
 
-produto_digitado = input("Digite o nome do produto:")
+produto = input("Digite o nome do produto:")
 
 with open("vendas_completo.csv", "r", encoding="utf-8") as file:
     vendas = pd.read_csv(file)
 
-    filtro = vendas[vendas["produto"] == produto_digitado].copy()
+    filtro = vendas[vendas["produto"] == produto].copy()
 
     filtro["total"] = filtro["quantidade"] * filtro["preco_unitario"]
     total = filtro["total"].sum()
@@ -45,11 +46,13 @@ with open("vendas_completo.csv", "r", encoding="utf-8") as file:
     print(vendas_mes)
 
 plt.plot(vendas_mes.index, vendas_mes.values)
-plt.title(produto_digitado)
+plt.title(produto)
 plt.xlabel("Mês")
 plt.ylabel("Vendas")
+
+produto_digitado = produto.replace(" ", "_")
+unicodedata.normalize("NFD", produto_digitado)
+plt.savefig(f"relatorio_{produto_digitado}.png")
 plt.show()
 
-plt.savefig(f"relatorio_{produto_digitado}.png")
-
-filtro.to_csv(f"vendas_{produto_digitado}.csv")
+filtro.to_csv(f"vendas_{produto_digitado}.csv", index=False)
