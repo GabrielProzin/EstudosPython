@@ -41,5 +41,3 @@ with open("vendas_completo.csv", "r", encoding="utf-8") as file:
     plt.title("Valor total de vendas por produto")
     plt.savefig("vendas_por_produto.png")
     plt.show()
-
-    

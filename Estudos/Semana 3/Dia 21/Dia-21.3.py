@@ -27,7 +27,7 @@ produto_digitado = input("Digite o nome do produto:")
 with open("vendas_completo.csv", "r", encoding="utf-8") as file:
     vendas = pd.read_csv(file)
 
-    filtro = vendas[vendas["produto"] == produto_digitado]
+    filtro = vendas[vendas["produto"] == produto_digitado].copy()
 
     filtro["total"] = filtro["quantidade"] * filtro["preco_unitario"]
     total = filtro["total"].sum()
