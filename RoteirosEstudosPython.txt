@@ -17,7 +17,7 @@ Semana 2 – Estruturas e Funções
 | --- | ------------------------- | ------------------------------------- | ------------------------------------- |
 | 8   | Listas                    | `append()`, `remove()`, `len()`, `in` | Lista de compras com adição e remoção |
 | 9   | Tuplas e dicionários      | chaves, valores, `items()`            | Dicionário com nome, idade e cidade   |
-| 10  | Funções                   | `def`, parâmetros e retorno           | Função que calcula IMC                |
+| 10  | Funções                   | `def`, parâ.metros e retorno           | Função que calcula IMC                |
 | 11  | Escopo e retorno múltiplo | variáveis locais/globais              | Função que retorna soma e média       |
 | 12  | Módulos e bibliotecas     | `import`, `math`, `random`            | Gerador de senha aleatória            |
 | 13  | Tratamento de erros       | `try`, `except`, `finally`            | Calculadora com tratamento de erro    |

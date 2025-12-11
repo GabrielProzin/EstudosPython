@@ -147,3 +147,48 @@ Output:
         {'nome': 'Ana', 'idade': 26, 'cidade': 'SP'}
 
 ===============================================================
+
+Biblioteca ^^DATETIME^^
+import datetime
+
+serve para trabalhar com:
+
+-DATAS
+-HORAS
+-FORMATAÇÕES
+
+Modos de uso:
+
+--Pegar data/hora atual--
+horas = datetime.now()
+
+--Formatar datas--
+horas.strftime("%d/%m/%Y")
+
+===============================================================
+
+Biblioteca ^^OS^^
+import os
+
+Ela consegue interagir com o sistema operacional.
+O que é possível fazer:
+
+-LISTAR ARQUIVOS
+-NAVEGAR ENTRE PASTAS
+-PEGAR INFORMAÇÃO DE ARQUIVOS
+-RENOMEAR ARQUIVOS
+
+Modos de uso:
+
+--Listar arquivo--
+os.listdir("arquivos/")
+
+--Descobrir tamanho de arquivo--
+os.path.getsize("arquivos/arquivos.txt")
+
+--Descobrir quando o arquivo foi modificado--
+os.path.getmtime("arquivos/arquivos.txt")
+... nessa função ele vem em timestamp, para converter é: datetime.fromtimestamp(...)
+
+--Renomear arquivo--
+os.rename("antigo.txt", "novo.txt")
