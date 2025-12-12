@@ -14,13 +14,9 @@ Enunciado:
 Peça ao usuário:
 
 preço atual de um produto (digitado na mão)
-
 preço desejado (alvo)
-
 Se o preço atual for menor ou igual ao alvo:
-
 mostre "Pode comprar! O preço já está bom."
-
 Caso contrário:
 
 mostre "Ainda está caro. Melhor esperar."
