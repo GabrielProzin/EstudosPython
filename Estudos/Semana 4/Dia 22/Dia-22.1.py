@@ -23,11 +23,9 @@ Mostre esse nome de arquivo na tela (não precisa criar o arquivo ainda).
 from datetime import datetime
 
 data_agora = datetime.now()
-
 print(data_agora)
 
 data_formatada = data_agora.strftime("%Y-%m-%d")
-
 print(data_formatada)
 
 nome_arquivo = f"backup-{data_formatada}.txt"
