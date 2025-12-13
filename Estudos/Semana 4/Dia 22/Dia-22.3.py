@@ -27,7 +27,21 @@ Mostre na tela cada renomeação feita.
 from datetime import datetime
 import os
 
-caminho = r"C:\Users\Gabriel Mendes\Desktop\EstudosPython\Estudos"
-pastas = os.listdir(caminho)
+data = datetime.now()
+data_formata = data.strftime("%Y,%m,%d")
 
+caminho = r"C:\Users\anapa\Downloads\EstudosPython\Estudos\Semana 4\Dia 22"
+pastas = os.listdir(caminho)
 print(pastas)
+pasta = input("Digite qual pasta deseja acessar: ")
+
+caminho_completo = os.path.join(caminho, pasta)
+arquivos = os.listdir(caminho_completo)
+print(arquivos)
+
+
+arquivos_filtrados = [
+    arquivo
+    for arquivo in os.listdir(caminho_completo)
+        if arquivo.endswith(".txt")
+]
