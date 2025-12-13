@@ -28,7 +28,7 @@ from datetime import datetime
 import os
 
 data = datetime.now()
-data_formata = data.strftime("%Y,%m,%d")
+data_formata = data.strftime("%Y-%m-%d")
 
 caminho = r"C:\Users\anapa\Downloads\EstudosPython\Estudos\Semana 4\Dia 22"
 pastas = os.listdir(caminho)
@@ -39,9 +39,23 @@ caminho_completo = os.path.join(caminho, pasta)
 arquivos = os.listdir(caminho_completo)
 print(arquivos)
 
+extensao = input("Digite o tipo de extensão para filtrar: ")
+
+arquivos = os.listdir(caminho_completo)
 
 arquivos_filtrados = [
     arquivo
-    for arquivo in os.listdir(caminho_completo)
-        if arquivo.endswith(".txt")
+    for arquivo in arquivos
+        if arquivo.endswith(extensao)
 ]
+
+for arquivo in arquivos_filtrados:
+    nome_antigo = os.path.join(caminho_completo, arquivo)
+    novo_nome = f"{data_formata}-{arquivo}"
+    nome_novo = os.path.join(caminho_completo, novo_nome)
+
+    try:
+        os.rename(nome_antigo, nome_novo)
+        print(f"renomeado: {arquivo} → {novo_nome}")
+    except Exception as e:
+        print(f"erro ao renomear {arquivo}: {e}")
