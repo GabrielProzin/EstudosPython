@@ -28,19 +28,20 @@ Calcule o valor convertido e mostre:
 import requests
 
 def buscar_cotacao(moeda):
-    url = "https://open.er-api.com/v6/latest/"
-    url_completa = url + moeda
-    response = requests.get(url_completa)
-    lista_moedas = response.json()
-    return lista_moedas
+    url = f"https://open.er-api.com/v6/latest/{moeda}"
+    response = requests.get(url)
+    dados = response.json()
+    return dados["rates"]["BRL"]
 
-def converter_valor(valor):
-    valor_convertido = moeda * valor
-    return valor_convertido
+def converter_valor(valor, cotacao):
+    return valor * cotacao
 
 print("Conversão de moedas para BRL")
-moeda = input("Digite a moeda que deseja converter: ")
-buscar_cotacao(moeda)
 
+moeda = input("Digite a moeda que deseja converter: ")
 valor = float(input("Digite o valor: "))
-converter_valor(valor)
+
+cotacao = buscar_cotacao(moeda)
+valor_convertido = converter_valor(valor, cotacao)
+
+print(f"{valor:.2f} {moeda} = {valor_convertido:.2f} BRL")
