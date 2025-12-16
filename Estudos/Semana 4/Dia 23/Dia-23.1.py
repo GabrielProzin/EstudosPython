@@ -26,9 +26,11 @@ Mostre na tela apenas a cotação atual do dólar em reais, algo como:
 
 import requests
 
-url = "https://open.er-api.com/v6/latest/GBP"
+url = "https://open.er-api.com/v6/latest/KZT"
 response = requests.get(url)
 print(response.status_code)
 cotacao = response.json()
 br = cotacao["rates"]["BRL"]
-print(f"1 GPB = {br:.2f}")
+print(f"1 KZT = {br:.2f}")
+
+print(cotacao)
