@@ -30,6 +30,7 @@ import requests
 def buscar_cotacao(moeda):
     url = f"https://open.er-api.com/v6/latest/{moeda}"
     response = requests.get(url)
+    print(response.status_code)
     dados = response.json()
     return dados["rates"]["BRL"]
 
