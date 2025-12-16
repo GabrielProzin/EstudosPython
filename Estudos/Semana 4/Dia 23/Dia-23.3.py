@@ -32,33 +32,44 @@ Tratar erros de rede para o programa não quebrar se a API cair.
 
 import requests
 
-
 def converter_valor(valor, cotacao):
     return valor * cotacao
 
+print("Conversor de moedas para BRL")
+
 while True:
-    moeda = input("Digite a moeda: ")
-    url = f"https://open.er-api.com/v6/latest/{moeda}"
-    
+    moeda = input("Digite a moeda (USD ou EUR) ou 'sair' para fechar o programa: ").upper()
+
+    if moeda == 'SAIR':
+        break
+
+    if moeda not in ["USD", "EUR"]:
+        print("Moeda inválida! Digite USD ou EUR.\n")
+        continue
+
     try:
+
+        url = f"https://open.er-api.com/v6/latest/{moeda}"
         response = requests.get(url)
-        if response.status_code == 200:
+        if response.status_code != 200:
+            print(f"Erro de conexão da API: {response.status_code}\n")
+            continue
 
-            dados = response.json()
-            cotacao = dados["rates"]["BRL"]
-            
-            if dados["result"] == "error":
+        dados = response.json()
 
-                print("Digite uma moeda valida!")
+        if dados["result"] == "error":
+            print("Erro na cotação da moeda. \n")
 
-            else:
-                if moeda in dados["rates"]:
+        valor = float(input("Digite o valor que deseja converter: "))
 
-                    valor = input("Digite o valor: ")
-                    conversao = converter_valor(valor, cotacao)
-                else:
-                    print(f"A moeda {moeda} não existe na cotação!")
-        else:
-            print(f"Código erro: {response}")    
-    except KeyError:
-        print("A moeda é somente letras!")
+        url = f"https://open.er-api.com/v6/latest/{moeda}"
+        
+        
+        cotacao = dados["rates"]["BRL"]
+
+        valor_convetido = converter_valor(valor, cotacao)
+        
+        print(f"{valor_convetido:.2f}")
+
+    except ValueError:
+        print("Digite um valor númerico válido!")
