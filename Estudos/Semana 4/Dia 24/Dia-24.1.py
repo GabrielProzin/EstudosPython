@@ -18,3 +18,9 @@ Pergunte ao usuário qual site ele quer abrir (ex: https://www.google.com).
 
 Abra o site automaticamente no navegador padrão usando webbrowser.open().
 '''
+
+import webbrowser
+
+site = input("Coloque o link do site que deseja abrir: ")
+
+webbrowser.open(site)
