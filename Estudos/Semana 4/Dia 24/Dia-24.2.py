@@ -30,4 +30,9 @@ import requests
 url = input("Digite o URL de algum site: ")
 
 response = requests.get(url)
+tag = input("Digite alguma tag do HTML para encontrar: ")
+
+if tag in response:
+    pri
+
 print(response.text)
