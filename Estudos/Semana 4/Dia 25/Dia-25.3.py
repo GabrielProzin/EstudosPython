@@ -72,7 +72,7 @@ while True:
         print("Saindo...")
         break
 
-
+# puxar resumo
 
 
 url = f"https://open.er-api.com/v6/latest/"
