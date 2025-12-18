@@ -26,13 +26,19 @@ o tamanho do conteúdo (len do response.text)
 '''
 
 import requests
+from bs4 import BeautifulSoup
 
 url = input("Digite o URL de algum site: ")
 
 response = requests.get(url)
-tag = input("Digite alguma tag do HTML para encontrar: ")
 
-if tag in response:
-    pri
+print(response.status_code)
+html = response.text
+print("Tamanho do conteúdo: ", len(html))
 
-print(response.text)
+soup = BeautifulSoup(response.text, "html.parser")
+
+if soup.title:
+    print("O conteúdo dentro do title é:", soup.title.text)
+else:
+    print("Title não encontrado!")
