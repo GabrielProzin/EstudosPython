@@ -21,3 +21,12 @@ Peça um valor em USD e mostre o valor em BRL.
 
 Permita o usuário converter vários valores enquanto ele não digitar "sair".
 '''
+
+
+def converter_valor(valor):
+    BRL = 5
+    return BRL * valor
+
+valor = float(input("Digite quantos $ deseja converter para R$: "))
+resultado = converter_valor(valor)
+print(f"${valor} dolar em reais é = R${resultado}")
