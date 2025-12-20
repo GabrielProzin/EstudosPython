@@ -36,18 +36,16 @@ def cotacao_moeda(moeda):
 def conversao_valor(cotacao, valor):
     return cotacao * valor
 
+def montar_historico(moeda, valor, valor_convertido):
+    resumo["moeda"] = moeda
+    resumo["valor_original"] = valor
+    resumo["valor_convertido"] = valor_convertido
+    return resumo
+
 historico = []
+resumo = {}
 
 contagem_conversao = 0
-
-total_usd = 0
-total_eur = 0
-
-maior_usd = 0
-maior_eur = 0
-
-dolar_conversao = 0
-euro_conversao = 0
 
 total_conversao = 0
 valor_conversao = 0
@@ -65,22 +63,25 @@ while True:
     if valor_conversao > maior_conversao:
         maior_conversao = valor_conversao
 
-    total_conversao += valor_conversao
-
 #Conversao em DOLAR
     if opcao == 1:
         moeda = "USD"
         cotacao = cotacao_moeda(moeda)
 
         valor = float(input("Quantos dolares deseja converter em reais? $"))
-        dolar_conversao = conversao_valor(cotacao, valor)
-        valor_conversao = dolar_conversao
+        valor_convertido = conversao_valor(cotacao, valor)
+        valor_comparativo = valor_convertido
 
-        cotacao_formatada = f"${valor} em reais são: R${dolar_conversao:.2f}"
+        if valor_comparativo > maior_conversao:
+            maior_conversao = valor_comparativo
+
+        cotacao_formatada = f"${valor} em reais são: R${valor_convertido:.2f}"
         
-        historico.append(cotacao_formatada)
+        historico.append(montar_historico(moeda, valor, valor_convertido))
 
-        total_usd += dolar_conversao
+        #historico.append(cotacao_formatada)
+
+        total_conversao += valor_convertido
         contagem_conversao += 1
         continue
 
@@ -90,14 +91,19 @@ while True:
         cotacao = cotacao_moeda(moeda)
 
         valor = float(input("Quantos euros deseja converter em reais? €"))
-        euro_conversao = conversao_valor(cotacao, valor)
-        valor_conversao = euro_conversao
+        valor_convertido = conversao_valor(cotacao, valor)
+        valor_comparativo = valor_convertido
 
-        cotacao_formatada = f"€{valor} em reais são: R${euro_conversao:.2f}"
+        if valor_comparativo > maior_conversao:
+            maior_conversao = valor_comparativo
+
+        cotacao_formatada = f"€{valor} em reais são: R${valor_convertido:.2f}"
         
-        historico.append(cotacao_formatada)
+        historico.append(montar_historico(moeda, valor, valor_convertido))
 
-        total_eur += euro_conversao
+        #historico.append(cotacao_formatada)
+
+        total_conversao += valor_convertido
         contagem_conversao += 1
         continue
 
@@ -107,12 +113,15 @@ while True:
         print(f"\nO valor total convertido foi de : R${total_conversao:.2f}")
         print(f"A maior conversão de valor foi de: R${maior_conversao:.2f}")
         print(f"Foram feitas {contagem_conversao} conversões ao total! \n")
-        print(f"{historico}\n")
+
+        for indice in enumerate(historico):
+            print(f"{historico}\n")
+
+        #print(f"{historico}\n")
         continue
 
     if opcao == 0:
         print("Saindo...")
         break
 
-    #fazer funçao para atualizar valor
     #finalizar historico em dicionario
