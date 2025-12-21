@@ -21,3 +21,11 @@ Caso contrário:
 
 mostre "Ainda está caro. Melhor esperar."
 '''
+
+valor_produto = float(input("Defina o preço do produto: R$"))
+preco_desejado = float(input("Digite o valor desejado do produto: R$"))
+
+if valor_produto <= preco_desejado:
+    print("Pode comprar! O preço já está bom.")
+else:
+    print("Ainda está caro. Melhor esperar.")
