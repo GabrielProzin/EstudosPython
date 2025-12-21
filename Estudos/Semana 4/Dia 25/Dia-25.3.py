@@ -37,18 +37,17 @@ def conversao_valor(cotacao, valor):
     return cotacao * valor
 
 def montar_historico(moeda, valor, valor_convertido):
-    resumo["moeda"] = moeda
-    resumo["valor_original"] = valor
-    resumo["valor_convertido"] = valor_convertido
-    return resumo
+    return {
+        "moeda": moeda,
+        "valor_original": valor,
+        "valor_convertido": valor_convertido
+    }
 
 historico = []
-resumo = {}
 
 contagem_conversao = 0
 
 total_conversao = 0
-valor_conversao = 0
 maior_conversao = 0
 
 while True:
@@ -59,9 +58,6 @@ while True:
     print("3 - Resumo")
     print("0 - SAIR")
     opcao = int(input("Digite alguma opção: "))
-
-    if valor_conversao > maior_conversao:
-        maior_conversao = valor_conversao
 
 #Conversao em DOLAR
     if opcao == 1:
@@ -77,9 +73,9 @@ while True:
 
         cotacao_formatada = f"${valor} em reais são: R${valor_convertido:.2f}"
         
-        historico.append(montar_historico(moeda, valor, valor_convertido))
-
-        #historico.append(cotacao_formatada)
+        resumo = montar_historico(moeda, valor, valor_convertido)
+        
+        historico.append(resumo)
 
         total_conversao += valor_convertido
         contagem_conversao += 1
@@ -98,10 +94,10 @@ while True:
             maior_conversao = valor_comparativo
 
         cotacao_formatada = f"€{valor} em reais são: R${valor_convertido:.2f}"
-        
-        historico.append(montar_historico(moeda, valor, valor_convertido))
 
-        #historico.append(cotacao_formatada)
+        resumo = montar_historico(moeda, valor, valor_convertido)
+        
+        historico.append(resumo)
 
         total_conversao += valor_convertido
         contagem_conversao += 1
@@ -114,14 +110,15 @@ while True:
         print(f"A maior conversão de valor foi de: R${maior_conversao:.2f}")
         print(f"Foram feitas {contagem_conversao} conversões ao total! \n")
 
-        for indice in enumerate(historico):
-            print(f"{historico}\n")
+        for i, item in enumerate(historico, start=1):
+                print(
+                f"{i} - {item['moeda']} | "
+                f"Valor original: {item['valor_original']} | "
+                f"Convertido: R${item['valor_convertido']:.2f}"
+    )
 
-        #print(f"{historico}\n")
         continue
 
     if opcao == 0:
         print("Saindo...")
         break
-
-    #finalizar historico em dicionario
