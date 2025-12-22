@@ -25,3 +25,11 @@ alimentação    300
 transporte     120
 lazer          75
 '''
+
+import pandas as pd
+
+dados = pd.read_csv("gastos.csv")
+
+total_gasto = dados.groupby("categoria")["valor"].sum().sort_values(ascending=False)
+
+print(total_gasto)
