@@ -26,3 +26,20 @@ Coloque um título:
 Salve o gráfico como grafico_gastos.png.
 Mostre o gráfico na tela.
 '''
+
+import pandas as pd
+import matplotlib.pyplot as plt
+
+dados = pd.read_csv("gastos.csv")
+
+total = dados.groupby("categoria")["valor"].sum()
+
+plt.bar(total.index, total.values)
+
+plt.title("Despesas por Categoria")
+plt.xlabel("Categorias")
+plt.ylabel("Soma dos valores")
+
+plt.savefig("grafico_gastos.png")
+
+plt.show()
