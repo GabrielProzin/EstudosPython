@@ -24,3 +24,11 @@ exiba o total gasto, somando todos os valores da coluna valor.
 Exemplo esperado no terminal:
 Total gasto: R$ 105.00
 '''
+
+import pandas as pd
+
+dados = pd.read_csv("gastos.csv")
+
+total = dados["valor"].sum()
+
+print(f"Total gasto: R${total}:.2f")
