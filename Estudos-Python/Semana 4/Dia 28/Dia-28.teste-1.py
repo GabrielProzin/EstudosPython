@@ -17,9 +17,6 @@ plt.xlabel("Horas estudadas")
 plt.ylabel("Aprovação")
 plt.show()
 
-
-
-
 # print(resultado)
 # print(aulas_assistidas)
 # print(horas_estudadas)
