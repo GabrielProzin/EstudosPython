@@ -1,0 +1,15 @@
+O que é distribuição?
+
+- Distribuição é como os dados estão espalhados.
+
+Distribuição concentrada:
+Os valores estão muito próximos uns dos outros, com baixa variabilidade.
+Exemplo: [7, 7, 6.5, 7.2, 6.8, 7, 7.1]
+
+Distribuição espalhada:
+Os dados ocupam um intervalo grande, com valores bem distantes entre si.
+Exemplo: [2, 4, 6, 7, 8, 9, 10]
+
+Distribuição enviesada para baixo:
+A maioria dos valores é alta, mas poucos valores muito baixos puxam a distribuição para a esquerda.
+Exemplo: 1, 2, 2, 3, 4, 5, 9
