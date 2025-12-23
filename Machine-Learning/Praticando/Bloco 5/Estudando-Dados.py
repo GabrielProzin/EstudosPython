@@ -17,3 +17,4 @@ Você confia nesses dados para um modelo real?
 
 👉 Objetivo: pensar como cientista de dados
 '''
+

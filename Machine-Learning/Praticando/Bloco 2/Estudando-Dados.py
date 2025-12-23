@@ -28,3 +28,5 @@ dados = pd.read_csv("Machine-Learning/spotify_data clean.csv")
 
 media_popularidade = dados["artist_popularity"].mean()
 print(f"A média de popularidade dos artistas é de: {media_popularidade:.2f}")
+
+a
