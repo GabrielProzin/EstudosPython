@@ -1,3 +1,15 @@
+O que é Machine Learning?
+- É um campo de estudos onde o computador ganha a habilidade de aprender sem programar algo explicitamente.
+
+Machine learning possui dois tipos de aprendizado:
+- Aprendizado supervisionado (Supervised Learning): 
+O modelo é treinando com um conjunto de dados que já possui "respostas" corretas (rótulos). Para cada (input), existe uma saída esperada (output).
+Objetivo: É encontrar uma relação entre o input e o output.
+
+- Aprendizado não supervisionado (Unsupervised Learning):
+O modelo recebe dados sem respostas pré-definidas, não possui (rótulos) informando o que é certo ou errado.
+Objetivo: A partir disso ele tenta identificar os padrões, estruturas e agrupamentos sem orientação externa.
+
 O que é distribuição?
 
 - Distribuição é como os dados estão espalhados.

@@ -17,3 +17,9 @@ música popular (sim/não)?
 
 👉 Objetivo: pensar em preparação de dados
 '''
+
+import pandas as pd
+
+dados = pd.read_csv("Machine-Learning/spotify_data clean.csv")
+
+print(dados.head(100))
