@@ -6,6 +6,12 @@ Machine learning possui dois tipos de aprendizado:
 O modelo é treinando com um conjunto de dados que já possui "respostas" corretas (rótulos). Para cada (input), existe uma saída esperada (output).
 Objetivo: É encontrar uma relação entre o input e o output.
 
+Os dois tipos de aprendizados supervisionado é o de regressão e classificação.
+
+- Regressão: O algoritmo de aprendizagem precisa prever números a partir de um número infinito de números de saída possíveis.
+
+- Classificação: O algoritmo de aprendizagem precisa fazer uma previsão de categoria, de um pequeno conjunto de resultados possíveis.
+
 - Aprendizado não supervisionado (Unsupervised Learning):
 O modelo recebe dados sem respostas pré-definidas, não possui (rótulos) informando o que é certo ou errado.
 Objetivo: A partir disso ele tenta identificar os padrões, estruturas e agrupamentos sem orientação externa.
