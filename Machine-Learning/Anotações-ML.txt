@@ -30,4 +30,4 @@ Exemplo: [2, 4, 6, 7, 8, 9, 10]
 
 Distribuição enviesada para baixo:
 A maioria dos valores é alta, mas poucos valores muito baixos puxam a distribuição para a esquerda.
-Exemplo: 1, 2, 2, 3, 4, 5, 9
+Exemplo: 1, 2, 2, 3, 4, 5, 9.
