@@ -1,0 +1,32 @@
+🔹 SEMANA 1 — FUNDAMENTOS DE ML
+
+O que é Machine Learning
+
+Supervisionado × Não supervisionado
+Regressão linear
+Função de custo (MSE)
+Gradient Descent
+
+🔹 SEMANA 2 — REGRESSÃO LINEAR MÚLTIPLA
+
+Múltiplas variáveis
+Vetorização
+Feature scaling
+Overfitting (introdução)
+
+🔹 SEMANA 3 — CLASSIFICAÇÃO
+
+Classificação
+Regressão logística
+Sigmoid
+Função de custo logística
+Acurácia
+
+Regularização
+
+🔹 SEMANA 4 — CONSOLIDAÇÃO
+
+Refazer todos os exercícios
+Testar novos dados
+Explicar conceitos em texto
+Mini-projeto simples
