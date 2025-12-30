@@ -1,13 +1,30 @@
 '''
-🔥 BLOCO EXTRA — Perguntas que impressionam em entrevista
+🎯 BLOCO 5 — Pensamento de ML (sem ML ainda)
 
-Esse dataset representa bem o Spotify inteiro?
+Se você fosse prever popularidade:
 
-Que tipo de viés ele pode ter?
+isso seria regressão ou classificação?
 
-Se os dados fossem coletados hoje, o resultado mudaria?
+Quais colunas você usaria como features?
 
-Esse dataset favorece artistas famosos?
+Quais colunas você descartaria?
 
-Que informação importante está faltando?
+Você precisaria normalizar algum dado?
+
+O problema parece simples ou complexo?
+
+Você confia nesses dados para um modelo real?
+
+👉 Objetivo: pensar como cientista de dados
 '''
+
+import streamlit as st
+import pandas as pd
+
+st.title("Análise de dados")
+
+dados = pd.read_csv("spotify_data clean.csv")
+print(dados)
+
+st.write("Visualização dos dados:")
+st.dataframe(dados.head())
