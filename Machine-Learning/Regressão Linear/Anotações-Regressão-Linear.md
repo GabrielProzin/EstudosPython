@@ -12,3 +12,7 @@ Existem **2** tipos de regressão linear: **simples e a múltipla**.
 **f(x)**: é a função que o algoritmo irá criar.  
 **x**: é a variável independente, ou seja, os atributos.  
 **yˆ**: a saída estimada, com base na função.  
+
+O objetivo da regressão linear é encontrar uma reta que consiga definir bem os dados e minimizar a diferença entre o valor real e a saída calculada pelo modelo.
+
+![](Imagens\formula_linha.png)
